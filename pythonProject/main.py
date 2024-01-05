@@ -28,8 +28,5 @@ model = load_model_from_json(model_path)
 # Inițializarea motorului de inferență
 infer = VariableElimination(model)
 
-# Exercițiul 1, Laboratorul 11
-# Probabilitatea ca o persoană să fie obosită dacă nu are gripă, nu are abces și nu are anorexie
-prob_oboseala = infer.query(variables=['Oboseală'], evidence={'Gripă': 1, 'Abces': 1, 'Anorexie': 1})
-print(prob_oboseala)
+
 
