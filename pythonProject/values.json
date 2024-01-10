@@ -1,13 +1,13 @@
 {
-  "nodes": ["Gripă", "Abces", "Febra", "Oboseală", "Anorexie"],
+  "nodes": ["Gripa", "Abces", "Febra", "Oboseala", "Anorexie"],
   "edges": [
-    ["Gripă", "Febra"],
+    ["Gripa", "Febra"],
     ["Abces", "Febra"],
-    ["Febra", "Oboseală"],
+    ["Febra", "Oboseala"],
     ["Febra", "Anorexie"]
   ],
   "cpds": {
-    "Gripă": {
+    "Gripa": {
       "variable_card": 2,
       "values": [[0.1], [0.9]]
     },
@@ -18,10 +18,10 @@
     "Febra": {
       "variable_card": 2,
       "values": [[0.8, 0.7, 0.25, 0.05], [0.2, 0.3, 0.75, 0.95]],
-      "evidence": ["Gripă", "Abces"],
+      "evidence": ["Gripa", "Abces"],
       "evidence_card": [2, 2]
     },
-    "Oboseală": {
+    "Oboseala": {
       "variable_card": 2,
       "values": [[0.6, 0.2], [0.4, 0.8]],
       "evidence": ["Febra"],
