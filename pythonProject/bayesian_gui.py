@@ -45,13 +45,13 @@ def calculate():
         messagebox.showwarning("Avertizare", "Te rog să selectezi o variabilă pentru a calcula probabilitatea.")
         return
 
-    evidence = {node: (1 if var.get() == "Da" else 0 if var.get() == "Nu" else None)
+    evidence = {node: (0 if var.get() == "Da" else 1 if var.get() == "Nu" else None)
                 for node, var in evidence_vars.items() if var.get() != "Nedefinit"}
 
     try:
         prob_result = infer.query(variables=[selected_variable], evidence=evidence)
         prob_values = prob_result.values
-        prob_text = f"Probabilitatea pentru '{selected_variable}':\n"
+        prob_text = f"Evidențe: {evidence} \nP({selected_variable}):\n"
         prob_text += "\n".join([f"{state}: {prob:.2f}" for state, prob in enumerate(prob_values)])
         messagebox.showinfo("Rezultatul Interogării", prob_text)
     except Exception as e:
